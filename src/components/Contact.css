@@ -1,0 +1,150 @@
+/* MAIN */
+.contact {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CONTAINER */
+.contact-container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.contact-title span {
+  color: gold;
+}
+
+.contact-sub {
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* INFO */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.info-item:hover {
+  color: gold;
+  transform: translateX(5px);
+}
+
+/* RIGHT */
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* FORM */
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* LABEL */
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* FLOAT EFFECT */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: gold;
+  background: #0f0f0f;
+  padding: 0 5px;
+}
+
+/* FULL WIDTH */
+.input-group.full {
+  grid-column: span 2;
+}
+
+/* BUTTON */
+.form-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(45deg, gold, #ffd700);
+  color: black;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  transform: scale(1.05);
+  background: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+}

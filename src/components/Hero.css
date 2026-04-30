@@ -1,0 +1,126 @@
+/* MAIN HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  background: url("https://source.unsplash.com/1600x900/?luxury,jewelry")
+    no-repeat center/cover;
+
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* CONTAINER */
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-eyebrow {
+  color: gold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  background: linear-gradient(45deg, gold, #ffd700, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-body {
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+/* BUTTONS */
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  background: gold;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.btn-ghost {
+  padding: 12px 25px;
+  border: 1px solid gold;
+  color: gold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-ghost:hover {
+  background: gold;
+  color: black;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1s ease;
+}
+
+.hero-img-wrap {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
